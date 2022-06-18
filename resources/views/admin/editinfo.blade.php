@@ -1,10 +1,4 @@
 
-session_start();
-@if(session('active')=='true')
-{
-
-
-
 <html lang="en"><head>
     <meta charset="utf-8">
     <title>DASHMIN - Bootstrap Admin Template</title>
@@ -203,13 +197,4 @@ session_start();
 
 
 </body></html>
-
-}
-@else{
-    <script>window.location = "http://localhost/medicalcare/public/login";</script>
-
-}
-@endif
-session_destroy();
-
 

@@ -1,7 +1,5 @@
 
-session_start();
-@if(session('active')=='true')
-{
+
 
 
 
@@ -166,8 +164,3 @@ http://www.templatemo.com/tm-467-easy-profile
 </body>
 </html>
 
-}@else{
-    <script>window.location = "http://localhost/medicalcare/public/login";</script>
-}
-session_destroy();
-@endif

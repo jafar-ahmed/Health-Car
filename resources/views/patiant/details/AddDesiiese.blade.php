@@ -1,8 +1,5 @@
 
 
-session_start();
-@if(session('active')=='true')
-{
 
 
 
@@ -200,11 +197,4 @@ session_start();
 
 
 </body></html>
-
-
-}@else{
-    return redirect()->route('login');
-}
-@endif
-session_destroy();
 

@@ -1,7 +1,5 @@
 
-session_start();
-@if(session('active')=='true')
-{
+
 
 
 <html lang="en"><head>
@@ -195,11 +193,3 @@ session_start();
 
 
 </body></html>
-
-}@else{
-    <script>window.location = "http://localhost/medicalcare/public/login";</script>
-
-}
-@endif
-session_destroy();
-

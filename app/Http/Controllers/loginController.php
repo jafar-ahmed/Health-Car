@@ -97,6 +97,8 @@ class loginController extends Controller
 
     public function check_type(Request $request)
     {
+        
+        
 
         $admin = new admin();
         $doctor = new doctor();
@@ -110,7 +112,7 @@ class loginController extends Controller
       $pass = $request->input('pass');
 
       $doctor = strpos($name, '@gmail.com') ;
-        $patiant = substr($name , 0, 3)==121 ;
+        $patiant = substr($name , 0, 3)==000 ;
         $admin = !($doctor || $patiant);
         // @gmail.com doctor
         // without @gmail.com its admin
@@ -141,6 +143,7 @@ class loginController extends Controller
                     }
 
         } elseif ($admin) {
+            
 
            if (Auth::guard('admin')->attempt(['username' => $request->input('name') , 'password' =>$request->input('pass')])) {
             $admin = admin::where('username' , $request->input('name'))->first();
@@ -151,6 +154,8 @@ class loginController extends Controller
                 return redirect()->route('AdminHome');
             }
         }
+        return redirect()->route('AdminHome');
+
 
 
 
